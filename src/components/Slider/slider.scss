@@ -1,17 +1,17 @@
 :root {
+  // переменная которая получает значение из js, от нее зависит длинна слайдера
   --slider-length: 0;
 }
 
 .slider {
   width: calc(844px * var(--slider-length));
   display: flex;
-  transition: .5s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 .slide {
   /* ширина слайда вычисляется разностью ширины экраны и двойного padding секции Feedback + двойного padding body */
   width: calc(100vw - (2*var(--side-padding)) - 24px);
-
   margin: 0 20px 0 0;
   display: flex;
   flex-direction: column;
@@ -94,7 +94,7 @@
 
     &:first-of-type {
       margin: 0;
-  
+
       &::after {
         content: none;
       }

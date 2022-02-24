@@ -20,7 +20,7 @@ export default function Feedback() {
     <section className='feedback'>
 
       <div className='feedback__content'>
-        <Slider data={FEEDBACK_DATA} currentElement={index} />
+        <Slider slidesArray={FEEDBACK_DATA} currentElement={index} />
       </div>
 
       <div className='feedback__button-row'>

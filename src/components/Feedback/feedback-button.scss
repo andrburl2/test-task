@@ -7,7 +7,7 @@
   border: none;
   border-radius: 50%;
   outline: none;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
   position: relative;
   cursor: pointer;
   transition: .5s ease-in-out;
@@ -35,14 +35,14 @@
   }
 
   &:focus {
-    border: 1px solid #581CB1;
+    border: 1px solid #581cb1;
     filter: drop-shadow(0px 20px 40px rgba(99, 114, 130, .08));
     box-shadow: 0px 1px 1px rgba(0, 0, 0, .08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
   }
 
   &:disabled {
     cursor: auto;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
 
     &::before {
       opacity: .2;

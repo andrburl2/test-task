@@ -1,0 +1,51 @@
+.feedback__button {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255, .2);
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
+  position: relative;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+
+  &::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../images/arrow.svg) center/contain no-repeat;
+  }
+
+  &:first-of-type {
+    margin: 0 20px 0 0;
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, .05), 0px 40px 40px rgba(10, 0, 32, .08);
+  }
+
+  &:focus {
+    border: 1px solid #581cb1;
+    filter: drop-shadow(0px 20px 40px rgba(99, 114, 130, .08));
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
+  }
+
+  &:disabled {
+    cursor: auto;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130, .15);
+
+    &::before {
+      opacity: .2;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+:root {
+  // переменная которая получает значение из js, от нее зависит длинна слайдера
+  --slider-length: 0;
+}
+
+.slider {
+  width: calc(844px * var(--slider-length));
+  display: flex;
+  transition: .4s ease-in-out;
+}
+
+.slide {
+  /* ширина слайда вычисляется разностью ширины экраны и двойного padding секции Feedback + двойного padding body */
+  width: calc(100vw - (2*var(--side-padding)) - 24px);
+  margin: 0 20px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide__text {
+  width: 100%;
+  margin: 0 0 32px;
+  padding: 0 5px 0 0; /* отступ для скролла */
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: 0.8px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+
+  /* стилизация скрола для Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #6527d9 #8452e1;
+  
+  /* для Chrome/Edge/Safari */
+  &::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #6527d9;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #8452e1;
+    border-radius: 5px;
+  }
+}
+
+.slide__author {
+  display: flex;
+}
+
+.slide__author-text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.2px;
+
+  &:first-of-type {
+    margin: 0 8px 0 0;
+    font-weight: 600;
+
+    &::after {
+      content: ',';
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide {
+    justify-content: space-between;
+  }
+
+  .slide__text {
+    margin: 0 0 25px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.2px;
+  }
+
+  .slide__author {
+    flex-direction: column;
+  }
+
+  .slide__author-text {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+
+    &:first-of-type {
+      margin: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

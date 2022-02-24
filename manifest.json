@@ -1,0 +1,15 @@
+{
+  "short_name": "Test task",
+  "name": "Test task",
+  "description": "Test task for the Junior Frontend Developer vacancy",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
